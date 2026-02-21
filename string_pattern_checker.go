@@ -7,7 +7,7 @@ import (
 
 func main() {
 	var input string
-	fmt.Println("Enter sting starting with 'i', containing 'a' & ending with 'n' : ")
+	fmt.Println("Enter string starting with 'i', containing 'a' & ending with 'n' : ")
 	fmt.Scan(&input)
 
 	input = strings.ToLower(input)

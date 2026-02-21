@@ -45,7 +45,22 @@ func AnalyseFile(path string) (map[string]int, error) {
 
 func main() {
 	flag.Parse()
-	s := *source_file
-	fmt.Println(AnalyseString(s))
-	// fmt.Println(AnalyseFile(s))
+	
+	if *source_file != "" {
+		result, err := AnalyseFile(*source_file)
+		if err != nil {
+			fmt.Println("Error:", err)
+			return
+		}
+		fmt.Println(result)
+	} else if *source_text != "" {
+		result, err := AnalyseString(*source_text)
+		if err != nil {
+			fmt.Println("Error:", err)
+			return
+		}
+		fmt.Println(result)
+	} else {
+		fmt.Println("Please provide either -s (text) or -ss (file path)")
+	}
 }

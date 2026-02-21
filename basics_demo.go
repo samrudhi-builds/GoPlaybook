@@ -4,6 +4,6 @@ import "fmt"
 func main() {
     fmt.Println("Hello, Go!")
 
-var x = 1, y = 2
-fmt.Println(x, y)
+    var x, y = 1, 2
+    fmt.Println(x, y)
 }
